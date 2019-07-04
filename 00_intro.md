@@ -1,58 +1,32 @@
 {{meta {load_files: ["code/intro.js"]}}}
 
-# Introduction
+# Introducción
 
 {{quote {author: "Ellen Ullman", title: "Close to the Machine: Technophilia and its Discontents", chapter: true}
 
-We think we are creating the system for our own purposes. We believe
-we are making it in our own image... But the computer is not really
-like us. It is a projection of a very slim part of ourselves: that
-portion devoted to logic, order, rule, and clarity.
+Creemos que estamos creando el sistema para nuestros propios fines. Creemos que lo estamos haciendo a nuestra propia imagen ... Pero la computadora no es como nosotros. Es una proyección de una parte muy delgada de nosotros mismos: la parte dedicada a la lógica, el orden, la regla y la claridad.
 
 quote}}
 
 {{figure {url: "img/chapter_picture_00.jpg", alt: "Picture of a screwdriver and a circuit board", chapter: "framed"}}}
 
-This is a book about instructing ((computer))s. Computers are about as
-common as screwdrivers today, but they are quite a bit more complex,
-and making them do what you want them to do isn't always easy.
+Este es un libro sobre la instrucción de computadoras. Las computadoras son tan comunes como los destornilladores en la actualidad, pero son un poco más complejas, y hacer que hagan lo que usted quiere que hagan no siempre es fácil.
 
-If the task you have for your computer is a common, well-understood
-one, such as showing you your email or acting like a calculator, you
-can open the appropriate ((application)) and get to work. But for
-unique or open-ended tasks, there probably is no application.
 
-That is where ((programming)) may come in. _Programming_ is the act of
-constructing a _program_—a set of precise instructions telling a
-computer what to do. Because computers are dumb, pedantic beasts,
-programming is fundamentally tedious and frustrating.
+Si la tarea que tiene para su computadora es una tarea común y bien entendida, como mostrarle su correo electrónico o actuar como una calculadora, puede abrir el correspondiente *aplicación* y ponerse a trabajar. Pero para tareas únicas o abiertas, probablemente no haya ninguna aplicación.
+
+
+Ahí es donde puede entrar la programación. Programar es el acto de construir un programa con un conjunto de instrucciones precisas que le dicen a una computadora qué hacer. Debido a que las computadoras son bestias tontas y pedantes, la programación es fundamentalmente tediosa y frustrante.
 
 {{index [programming, "joy of"], speed}}
 
-Fortunately, if you can get over that fact, and maybe even enjoy the rigor
-of thinking in terms that dumb machines can deal with, programming can
-be rewarding. It allows you to do things in seconds that would take
-_forever_ by hand. It is a way to make your computer tool
-do things that it couldn't do before. And it provides a wonderful
-exercise in abstract thinking.
+Afortunadamente, si puedes superar ese hecho, y tal vez incluso disfrutar del rigor de pensar en términos que las máquinas tontas pueden manejar, la programación puede ser gratificante. Te permite hacer cosas en segundos que te llevarían una eternidad a mano. Es una forma de hacer que su computadora haga cosas que antes no podía hacer. Y proporciona un maravilloso ejercicio de pensamiento abstracto.
 
-Most programming is done with ((programming language))s. A _programming
-language_ is an artificially constructed language used to instruct
-computers. It is interesting that the most effective way we've found
-to communicate with a computer borrows so heavily from the way we
-communicate with each other. Like human languages, computer languages
-allow words and phrases to be combined in new ways, making it possible to
-express ever new concepts.
+La mayoría de la programación se realiza con lenguajes de programación. Un lenguaje de programación es un lenguaje construido artificialmente utilizado para instruir a las computadoras. Es interesante que la forma más efectiva que hemos encontrado para comunicarnos con una computadora se preste mucho de la manera en que nos comunicamos entre nosotros. Al igual que los lenguajes humanos, los lenguajes informáticos permiten que las palabras y frases se combinen de nuevas maneras, lo que hace posible expresar conceptos siempre nuevos.
 
 {{index [JavaScript, "availability of"], "casual computing"}}
 
-At one point language-based interfaces, such as the BASIC and DOS
-prompts of the 1980s and 1990s, were the main method of interacting with
-computers. They have largely been replaced with visual interfaces,
-which are easier to learn but offer less freedom. Computer languages
-are still there, if you know where to look. One such language,
-JavaScript, is built into every modern web ((browser)) and is thus
-available on almost every device.
+En un punto, las interfaces basadas en el lenguaje, como las ventanas de BASIC y DOS de los años 1980 y 1990, fueron el método principal de interacción con las computadoras. Han sido reemplazados en gran parte por interfaces visuales, que son más fáciles de aprender pero ofrecen menos libertad. Los lenguajes informáticos siguen ahí, si sabes dónde buscar. Uno de estos lenguajes, JavaScript, está incorporado en cada navegador web moderno y, por lo tanto, está disponible en casi todos los dispositivos.
 
 {{indexsee "web browser", browser}}
 
