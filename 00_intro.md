@@ -76,8 +76,7 @@ Esto no solo es aburrido, es ineficaz. Los nuevos problemas a menudo requieren n
 
 {{index "programming language", "machine code", "binary data"}}
 
-In the beginning, at the birth of computing, there were no programming
-languages. Programs looked something like this:
+Al principio, en el nacimiento de la informática, no existían lenguajes de programación. Los programas se parecían a esto:
 
 ```{lang: null}
 00110001 00000000 00000000
@@ -93,43 +92,30 @@ languages. Programs looked something like this:
 
 {{index [programming, "history of"], "punch card", complexity}}
 
-That is a program to add the numbers from 1 to 10 together and print
-out the result: `1 + 2 + ... + 10 = 55`. It could run on a simple,
-hypothetical machine. To program early computers, it was necessary to
-set large arrays of switches in the right position or punch holes in
-strips of cardboard and feed them to the computer. You can probably
-imagine how tedious and error-prone this procedure was. Even writing
-simple programs required much cleverness and discipline. Complex ones
-were nearly inconceivable.
+Ese es un programa para sumar los números del 1 al 10 e imprimir el resultado: `1 + 2 + ... + 10 = 55`. Se podría ejecutar en una máquina simple, hipotética. Para programar las primeras computadoras, fue necesario colocar grandes conjuntos de interruptores en la posición correcta o hacer agujeros en tiras de cartón y alimentarlos a la computadora. Probablemente pueda imaginar cuán tedioso y propenso a errores fue este procedimiento. Incluso la escritura de programas simples requería mucha inteligencia y disciplina. Los complejos eran casi inconcebibles.
 
 {{index bit, "wizard (mighty)"}}
 
-Of course, manually entering these arcane patterns of bits (the ones
-and zeros) did give the programmer a profound sense of being a mighty
-wizard. And that has to be worth something in terms of job
-satisfaction.
+Por supuesto, ingresar manualmente estos patrones arcanos de bits (los unos y los ceros) le dio al programador una profunda sensación de ser un mago poderoso. Y eso tiene que valer algo en términos de satisfacción laboral.
 
 {{index memory, instruction}}
 
-Each line of the previous program contains a single instruction. It
-could be written in English like this:
+Cada línea del programa anterior contiene una sola instrucción. Se podría escribir en inglés así:
 
- 1. Store the number 0 in memory location 0.
- 2. Store the number 1 in memory location 1.
- 3. Store the value of memory location 1 in memory location 2.
- 4. Subtract the number 11 from the value in memory location 2.
- 5. If the value in memory location 2 is the number 0,
-    continue with instruction 9.
- 6. Add the value of memory location 1 to memory location 0.
- 7. Add the number 1 to the value of memory location 1.
- 8. Continue with instruction 3.
- 9. Output the value of memory location 0.
+1. Almacene el número 0 en la ubicación de memoria 0.
+2. Almacene el número 1 en la ubicación de memoria 1.
+3. Almacene el valor de la ubicación de memoria 1 en la ubicación de memoria 2.
+4. Reste el número 11 del valor en la ubicación de memoria 2.
+5. Si el valor en la ubicación de memoria 2 es el número 0, continúe con la instrucción 9.
+6. Agregue el valor de la ubicación de memoria 1 a la ubicación de memoria 0.
+7. Agregue el número 1 al valor de la ubicación de memoria 1.
+8. Continuar con la instrucción 3.
+9. Muestra el valor de la ubicación de memoria 0.
+
 
 {{index readability, naming, binding}}
 
-Although that is already more readable than the soup of bits, it is
-still rather obscure. Using names instead of numbers for the
-instructions and memory locations helps.
+Aunque eso ya es más legible que la sopa de trocitos, todavía es bastante oscuro. Usar nombres en lugar de números para las instrucciones y ubicaciones de memoria ayuda.
 
 ```{lang: "text/plain"}
  Set “total” to 0.
@@ -147,21 +133,9 @@ instructions and memory locations helps.
 
 {{index loop, jump, "summing example"}}
 
-Can you see how the program works at this point? The first two lines
-give two memory locations their starting values: `total` will be used
-to build up the result of the computation, and `count` will keep track
-of the number that we are currently looking at. The lines using
-`compare` are probably the weirdest ones. The program wants to see
-whether `count` is equal to 11 to decide whether it can stop
-running. Because our hypothetical machine is rather primitive, it can
-only test whether a number is zero and make a decision based
-on that. So it uses the memory location labeled `compare` to compute
-the value of `count - 11` and makes a decision based on that value.
-The next two lines add the value of `count` to the result and
-increment `count` by 1 every time the program has decided that `count`
-is not 11 yet.
+¿Puedes ver cómo funciona el programa en este punto? Las primeras dos líneas dan a dos ubicaciones de memoria sus valores iniciales: `total` se utilizará para acumular el resultado del cálculo, y `count` mantendrá un registro del número que estamos viendo actualmente. Las líneas que usan `compare` son probablemente las más raras. El programa desea ver si `count` es igual a 11 para decidir si puede dejar de ejecutarse. Debido a que nuestra máquina hipotética es bastante primitiva, sólo puede probar si un número es cero y tomar una decisión basada en eso. Por lo tanto, utiliza la ubicación de memoria etiquetada `compare` para calcular el valor de`count - 11` y toma una decisión basada en ese valor. Las siguientes dos líneas agregan el valor de `count` al resultado e incrementan el `count` en 1 cada vez que el programa ha decidido que `count` aún no es 11
 
-Here is the same program in JavaScript:
+Aquí está el mismo programa en JavaScript:
 
 ```
 let total = 0, count = 1;
@@ -175,20 +149,11 @@ console.log(total);
 
 {{index "while loop", loop, [braces, block]}}
 
-This version gives us a few more improvements. Most important, there
-is no need to specify the way we want the program to jump back and
-forth anymore. The `while` construct takes care of that. It continues
-executing the block (wrapped in braces) below it as long as the
-condition it was given holds. That condition is `count <= 10`, which
-means “_count_ is less than or equal to 10”. We no longer have to
-create a temporary value and compare that to zero, which was just an
-uninteresting detail. Part of the power of programming languages is
-that they can take care of uninteresting details for us.
+Esta versión nos da algunas mejoras más. Lo más importante es que no es necesario especificar la forma en que queremos que el programa salte de un lado a otro. La construcción 'while' se encarga de eso. Continúa ejecutando el bloque (envuelto en corchetes) debajo de él, siempre y cuando se cumpla la condición que se le dio. Esa condición es `count <= 10`, lo que significa que" _count_ es menor o igual a 10 ". Ya no tenemos que crear un valor temporal y compararlo con cero, lo cual fue solo un detalle poco interesante. Parte del poder de los lenguajes de programación es que pueden ocuparse de detalles poco interesantes para nosotros.
 
 {{index "console.log"}}
 
-At the end of the program, after the `while` construct has finished,
-the `console.log` operation is used to write out the result.
+Al final del programa, una vez finalizada la construcción `while`, la operación` console.log` se utiliza para escribir el resultado.
 
 {{index "sum function", "range function", abstraction, function}}
 
