@@ -8,7 +8,7 @@ Creemos que estamos creando el sistema para nuestros propios fines. Creemos que 
 
 quote}}
 
-{{figure {url: "img/chapter_picture_00.jpg", alt: "Picture of a screwdriver and a circuit board", chapter: "framed"}}}
+![Picture of a screwdriver and a circuit board](images/chapter_picture_00.jpg?raw=true)
 
 Este es un libro sobre la instrucción de computadoras. Las computadoras son tan comunes como los destornilladores en la actualidad, pero son un poco más complejas, y hacer que hagan lo que usted quiere que hagan no siempre es fácil.
 
@@ -137,13 +137,13 @@ Aunque eso ya es más legible que la sopa de trocitos, todavía es bastante oscu
 
 Aquí está el mismo programa en JavaScript:
 
-```
-let total = 0, count = 1;
-while (count <= 10) {
-  total += count;
-  count += 1;
-}
-console.log(total);
+```js
+	let total = 0, count = 1;
+	while (count <= 10) {
+	  total += count;
+	  count += 1;
+	}
+	console.log(total);
 // → 55
 ```
 
@@ -157,10 +157,7 @@ Al final del programa, una vez finalizada la construcción `while`, la operació
 
 {{index "sum function", "range function", abstraction, function}}
 
-Finally, here is what the program could look like if we happened to
-have the convenient operations `range` and `sum` available, which
-respectively create a ((collection)) of numbers within a range and
-compute the sum of a collection of numbers:
+Finalmente, así podría lucir el programa si tuviéramos las operaciones 'rango' y 'suma' disponibles, que respectivamente crean una colección de números dentro de un rango y calculan la suma de una colección de números:
 
 ```{startCode: true}
 console.log(sum(range(1, 10)));
@@ -169,21 +166,11 @@ console.log(sum(range(1, 10)));
 
 {{index readability}}
 
-The moral of this story is that the same program can be expressed in
-both long and short, unreadable and readable ways. The first version of the
-program was extremely obscure, whereas this last one is almost
-English: `log` the `sum` of the `range` of numbers from 1 to 10. (We
-will see in [later chapters](data) how to define operations like `sum`
-and `range`.)
+La moraleja de esta historia es que el mismo programa se puede expresar de forma larga y forma corta, ilegible y legible. La primera versión del programa fue extremadamente oscura, mientras que la última es casi inglesa: `log` la` suma` del `rango` de números del 1 al 10. (Veremos en los últimos capítulos cómo hacer para definir operaciones como `sum` y` range`.)
 
 {{index ["programming language", "power of"], composability}}
 
-A good programming language helps the programmer by allowing them to
-talk about the actions that the computer has to perform on a higher
-level. It helps omit details, provides convenient building blocks
-(such as `while` and `console.log`), allows you to define your own
-building blocks (such as `sum` and `range`), and makes those blocks
-easy to compose.
+Un buen lenguaje de programación ayuda al programador al permitirle hablar sobre las acciones que la computadora debe realizar en un nivel superior. Ayuda a omitir detalles, proporciona bloques de construcción convenientes (como `while` y` console.log`), le permite definir sus propios bloques de construcción (como `sum` y` range`), y hace que esos bloques sean fáciles de componer .
 
 ## What is JavaScript?
 
@@ -193,56 +180,23 @@ easy to compose.
 
 {{indexsee Web, "World Wide Web"}}
 
-JavaScript was introduced in 1995 as a way to add programs to web
-pages in the Netscape Navigator browser. The language has since been
-adopted by all other major graphical web browsers. It has made modern
-web applications possible—applications with which you can interact
-directly without doing a page reload for every action. JavaScript is also
-used in more traditional websites to provide various forms of
-interactivity and cleverness.
+JavaScript se introdujo en 1995 como una forma de agregar programas a páginas web en el navegador Netscape. Desde entonces, el lenguaje ha sido adoptado por todos los demás navegadores principales. Ha hecho posibles las aplicaciones web modernas, aplicaciones con las que puedes interactuar directamente sin hacer una recarga de página para cada acción. JavaScript también se usa en sitios web más tradicionales para proporcionar diversas formas de interactividad e inteligencia.
 
 {{index Java, naming}}
 
-It is important to note that JavaScript has almost nothing to do with
-the programming language named Java. The similar name was inspired by
-marketing considerations rather than good judgment. When JavaScript
-was being introduced, the Java language was being heavily marketed and
-was gaining popularity. Someone thought it was a good idea to try to
-ride along on this success. Now we are stuck with the name.
+Es importante tener en cuenta que JavaScript no tiene casi nada que ver con el lenguaje de programación llamado Java. El nombre similar fue inspirado por consideraciones de marketing en lugar de buen juicio. Cuando se introdujo JavaScript, el lenguaje Java se estaba comercializando en gran medida y estaba ganando popularidad. Alguien pensó que era una buena idea intentar avanzar con este éxito. Ahora estamos atrapados con el nombre.
 
 {{index ECMAScript, compatibility}}
 
-After its adoption outside of Netscape, a ((standard)) document was
-written to describe the way the JavaScript language should work so
-that the various pieces of software that claimed to support JavaScript
-were actually talking about the same language. This is called the
-ECMAScript standard, after the Ecma International organization that
-did the standardization. In practice, the terms ECMAScript and
-JavaScript can be used interchangeably—they are two names for the same
-language.
+Después de su adopción fuera de Netscape, se escribió un documento estándar para describir la forma en que debería funcionar el lenguaje JavaScript, de modo que las distintas piezas de software que afirmaban ser compatibles con JavaScript en realidad estaban hablando del mismo idioma. Esto se llama el estándar ECMAScript, después de la organización Ecma International que realizó la estandarización. En la práctica, los términos ECMAScript y JavaScript se pueden usar indistintamente: son dos nombres para el mismo idioma.
 
 {{index [JavaScript, "weaknesses of"], debugging}}
 
-There are those who will say _terrible_ things about JavaScript. Many
-of these things are true. When I was required to write something in
-JavaScript for the first time, I quickly came to despise it. It would
-accept almost anything I typed but interpret it in a way that was
-completely different from what I meant. This had a lot to do with the
-fact that I did not have a clue what I was doing, of course, but there
-is a real issue here: JavaScript is ridiculously liberal in what it
-allows. The idea behind this design was that it would make programming
-in JavaScript easier for beginners. In actuality, it mostly makes
-finding problems in your programs harder because the system will not
-point them out to you.
+Hay quienes dirán terribles cosas sobre JavaScript. Muchas de estas cosas son ciertas. Cuando me pidieron que escribiera algo en JavaScript por primera vez, rápidamente lo desprecié. Aceptaría casi cualquier cosa que escribiera, pero lo interpretaría de una manera que era completamente diferente de lo que quería decir. Esto tuvo mucho que ver con el hecho de que no tenía ni idea de lo que estaba haciendo, por supuesto, pero hay un problema real aquí: JavaScript es ridículamente liberal en lo que permite. La idea detrás de este diseño fue que facilitaría la programación en JavaScript para los principiantes. En realidad, la mayoría de las veces hace que sea más difícil encontrar problemas en sus programas porque el sistema no los señalará a usted.
 
 {{index [JavaScript, "flexibility of"], flexibility}}
 
-This flexibility also has its advantages, though. It leaves space for
-a lot of techniques that are impossible in more rigid languages, and
-as you will see (for example in [Chapter ?](modules)), it can be used
-to overcome some of JavaScript's shortcomings. After ((learning)) the
-language properly and working with it for a while, I have learned to
-actually _like_ JavaScript.
+Sin embargo, esta flexibilidad también tiene sus ventajas. Deja espacio para muchas técnicas que son imposibles en lenguajes más rígidos, y como verá (por ejemplo, en el capítulo de módulos, estos se puede usar para superar algunas de las deficiencias de JavaScript. Después de aprender el idioma correctamente y trabajar con él durante una semana). Mientras, he aprendido a realmente como JavaScript.
 
 {{index future, [JavaScript, "versions of"], ECMAScript, "ECMAScript 6"}}
 
@@ -387,13 +341,13 @@ elements of programs—sometimes they are self-sufficient fragments, and
 sometimes they just refer to part of a nearby program. Programs (of
 which you have already seen a few) are written as follows:
 
-```
+```js
 function factorial(n) {
-  if (n == 0) {
-    return 1;
-  } else {
-    return factorial(n - 1) * n;
-  }
+	if (n == 0) {
+		return 1;
+	} else {
+		return factorial(n - 1) * n;
+	}
 }
 ```
 
@@ -403,7 +357,7 @@ Sometimes, to show the output that a program produces, the
 expected output is written after it, with two slashes and an arrow in
 front.
 
-```
+```js
 console.log(factorial(8));
 // → 40320
 ```
